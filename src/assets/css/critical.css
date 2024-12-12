@@ -4,43 +4,41 @@
 <--- -------------------------- -*/
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-  #hero {
+  #hero-81 {
     z-index: 1;
     position: relative;
-    /* prevents overflow from the lines extending past the screen width */
+    /* Prevents white rectangle pseudos from overlapping the sections below */
     overflow: hidden;
-    /* changes on tablet */
-    padding: 0 1rem;
-    padding-bottom: 6.25rem;
-    font-family: "Roboto", "Arial", sans-serif;
+    /* 144px - 300px - leaving extra space for the navigation */
+    padding: clamp(9rem, 25.95vw, 18.75rem) 1rem 0;
+    /* 130px - 450px */
+    padding-bottom: clamp(12.125rem, 30.95vw, 28.125rem);
     /* Centers button */
     text-align: center;
   }
-  #hero .cs-picture {
+  #hero-81 .cs-background {
     z-index: -2;
     position: absolute;
     top: 0;
     left: 0;
     display: block;
     height: 100%;
-    /* Background Image */
     width: 100%;
   }
-  #hero .cs-picture img {
+  #hero-81 .cs-background img {
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
-    /* Makes image act like a background-image */
     object-fit: cover;
   }
-  #hero .cs-picture:before {
+  #hero-81 .cs-background:before {
     z-index: 1;
     position: absolute;
     top: 0;
     left: 0;
-    /* Black Color Overlay */
+    /* Overlay */
     content: "";
     opacity: 0.7;
     display: block;
@@ -50,251 +48,247 @@
     /* prevents the cursor from interacting with it */
     pointer-events: none;
   }
-  #hero .cs-container {
-    position: relative;
+  #hero-81 .cs-container {
     margin: auto;
-    max-width: 80em;
+    max-width: 67.5rem;
     width: 100%;
-    /* we put the padding top and bottom on the container instead of #Hero so the pseudo element lines go to the top and bottom of the section */
-    /* 144px - 280px - leaving extra space for the navigation */
-    /* changes on tablet */
-    padding: clamp(9em, 25.95vw, 17.5em) 0;
   }
-  #hero .cs-container:before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    /* Left Line */
+  #hero-81 .cs-title {
+    position: relative;
+    /* 16px - 24px */
+    margin: 0 auto clamp(1rem, 4vw, 1.5rem);
+    max-width: 51.8125rem;
+    /* 39px - 61px */
+    font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
+    line-height: 1.2em;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+  }
+  #hero-81 .cs-title:after {
+    position: relative;
+    /* Divider Line */
     content: "";
     opacity: 1;
     display: block;
-    background: -moz-linear-gradient(top, rgba(250, 251, 252, 0.5) 0%, rgba(250, 251, 252, 0) 100%);
-    /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, rgba(250, 251, 252, 0.5) 0%, rgba(250, 251, 252, 0) 100%);
-    /* Chrome10-25,Safari5.1-6 */
-    height: 100%;
-    width: 1px;
+    /* 16px - 24px */
+    margin: clamp(1rem, 4vw, 1.5rem) auto clamp(1rem, 4vw, 1.5rem);
+    background: var(--primary);
+    /* 4px - 8px */
+    height: clamp(0.25rem, 0.8vw, 0.5rem);
+    /* 60px - 100px */
+    width: clamp(3.75rem, 9.5vw, 6.25rem);
   }
-  #hero .cs-flex-group {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    margin: auto;
-    /* 60px - 220px */
-    margin-bottom: clamp(3.75em, 15.5vw, 13.75em);
-    /* 464px - 562px */
-    max-width: clamp(29em, 60vw, 35.125em);
-    width: 80vw;
-    box-sizing: border-box;
-  }
-  #hero .cs-topper {
-    margin-bottom: 1rem;
-    color: var(--primary);
-    text-align: center;
-  }
-  #hero .cs-title {
-    width: 100%;
-    color: var(--bodyTextColorWhite);
-    text-align: center;
-  }
-  #hero .cs-text {
-    /* 32px - 40px */
-    margin: 0 auto clamp(2rem, 4vw, 2.5rem) 0;
+  #hero-81 .cs-text {
+    margin: 0 auto;
     /* 40px - 48px */
     margin-bottom: clamp(2.5rem, 4vw, 3rem);
-    color: var(--bodyTextColorWhite);
+    /* 464px - 800px */
+    max-width: clamp(29rem, 60vw, 50rem);
+    width: 100%;
+    /* 16px - 25px */
+    font-size: clamp(1rem, 1.95vw, 1.5625rem);
+    line-height: 1.5em;
+    color: #fff;
     text-align: center;
   }
-  #hero .cs-button-solid {
-    margin-bottom: 1rem;
-    height: initial;
-    line-height: clamp(2.875em, 5.5vw, 3.5em);
-  }
-  #hero .cs-button-transparent {
+  #hero-81 .cs-button-solid {
     z-index: 1;
     position: relative;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid var(--bodyTextColorWhite);
-    margin: 0 0.5rem;
-    background-color: transparent;
-    /* 46px - 56px */
-    height: clamp(2.875em, 5.5vw, 3.5em);
-    width: 11.25rem;
-    box-sizing: border-box;
-    padding: 0;
+    display: inline-block;
+    border-radius: 0.25rem;
+    margin: auto;
+    background-color: var(--primary);
+    min-width: 9.375rem;
+    padding: 0 1.5rem;
     text-decoration: none;
     font-size: 1rem;
     /* 46px - 56px */
-    line-height: clamp(2.875em, 5.5vw, 3.5em);
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
     font-weight: 700;
-    color: #fff;
+    color: #1a1a1a;
+    transition: color 0.3s;
   }
-  #hero .cs-button-transparent .cs-img {
-    display: block;
-    margin-right: 0.75rem;
-  }
-  #hero .cs-button-transparent:before {
+  #hero-81 .cs-button-solid:before {
     z-index: -1;
     position: absolute;
-    /* so it sits on top of the border */
-    top: -1px;
-    bottom: -1px;
-    left: -1px;
-    right: -1px;
-    content: "";
-    opacity: 1;
-    /* this is what creates the grow affect on hover */
-    transform: scaleX(0);
-    display: block;
-    background: #000;
-    transition: transform 0.3s;
-    transform-origin: left;
-  }
-  #hero .cs-button-transparent:hover:before {
-    transform: scaleX(1);
-  }
-}
-/* Tablet - 768px */
-@media only screen and (min-width: 48rem) {
-  #hero {
-    /* 32px - 40px */
-    padding: 0 clamp(2em, 5vw, 2.5em);
-  }
-  #hero .cs-container {
-    padding: clamp(7em, 27.95vw, 17.5em) 0 clamp(9em, 30.95vw, 23.5em) 0;
-  }
-  #hero .cs-container:after {
-    position: absolute;
     top: 0;
-    right: 0;
-    /* Right Line */
+    left: 0;
     content: "";
     opacity: 1;
-    display: block;
-    background: -moz-linear-gradient(top, rgba(250, 251, 252, 0) 0%, rgba(250, 251, 252, 0.5) 100%);
-    /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, rgba(250, 251, 252, 0) 0%, rgba(250, 251, 252, 0.5) 100%);
-    /* Chrome10-25,Safari5.1-6 */
+    border-radius: 0.25rem;
+    background: #000;
     height: 100%;
-    width: 1px;
+    width: 0%;
+    transition: width 0.3s;
   }
-  #hero .cs-button-solid {
-    margin-right: 1.25rem;
-    margin-bottom: 0;
+  #hero-81 .cs-button-solid:hover {
+    color: #fff;
+  }
+  #hero-81 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #hero-81:before {
+    z-index: 0;
+    position: absolute;
+    bottom: -139.6875rem;
+    /* this makes the right edge sit at the 50% line at all times */
+    right: 50%;
+    /* Left side of the triangle */
+    content: "";
+    opacity: 1;
+    transform: rotate(-67deg);
+    display: block;
+    background: #fff;
+    /* make really long so it covers the whole screen all the way to desktop */
+    height: 250rem;
+    width: 31.25rem;
+    transform-origin: center;
+  }
+  #hero-81:after {
+    z-index: 0;
+    position: absolute;
+    bottom: -139.6875rem;
+    /* this makes the left edge sit at the 50% line at all times */
+    left: 50%;
+    /* Right side of the triangle */
+    content: "";
+    opacity: 1;
+    transform: rotate(67deg);
+    display: block;
+    background: #fff;
+    height: 250rem;
+    width: 31.25rem;
+    transform-origin: center;
   }
 }
-/* Desktop Parallax Effect - 1300px */
-@media only screen and (min-width: 81.25em) {
-  #hero {
+/* Desktop - 1300px (To make image background parallax) */
+@media only screen and (min-width: 81.25rem) {
+  #hero-81 {
     background: url("/assets/images/landing.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    /* creates parallax effect on background image */
+    /* makes the parallax effect */
     background-attachment: fixed;
+  }
+  #hero-81 .cs-background img {
+    display: none;
   }
 }
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
-  body.dark-mode #hero .cs-background:before {
-    opacity: 0.8;
+  body.dark-mode #hero-81 .cs-background:before {
+    opacity: 0.85;
+  }
+  body.dark-mode #hero-81:before,
+  body.dark-mode #hero-81:after {
+    background: var(--dark);
   }
 }
 /*-- -------------------------- -->
-<---          Services          -->
+<---         Services           -->
 <--- -------------------------- -*/
-/* Mobile */
+/* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-  .services {
-    z-index: 100;
+  #h-services-81 {
+    /* give a higher z index than the hero so it can sit on top */
+    z-index: 10;
     position: relative;
-    border-top: 0.375em solid var(--primary);
-    border-radius: 0.3125em;
-    margin: auto;
-    margin-top: calc(-167 / 16 * 1em);
-    margin-bottom: 3.125em;
-    background: #fff;
-    max-width: 82.5em;
-    width: 90%;
-    padding: 3.125em 1.25em;
-    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
+    /* 40px - 100px */
+    padding: 0 1rem clamp(2.5rem, 7.9vw, 6.25rem) 1rem;
   }
-  .services .card {
-    display: block;
-    margin: auto;
-    margin-bottom: 3.125em;
-    max-width: 22.3125em;
+  #h-services-81 .cs-card-group {
+    border-top: 8px solid var(--primary);
+    border-radius: 0.3125rem;
+    margin: 0 auto 0;
+    /* negative margin pulls it up on top of the hero section */
+    /* -46px to -76px - we're calculating whatever clamp is and multiplying by -1
+            to make the value negative since clamp doesn't work with negative values */
+    margin-top: calc(clamp(5rem, 13vw, 4.75rem)*-1);
+    background-color: #fff;
+    max-width: 29.0625rem;
     width: 100%;
+    /* prevents padding and border from affecting height and width */
+    box-sizing: border-box;
+    /* 40px - 60px top and bottom, 16px - 60px left & right */
+    padding: clamp(2.5rem, 4.7vw, 3.75rem) clamp(1rem, 4vw, 3.75rem);
+    box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.05);
   }
-  .services .card picture {
+  #h-services-81 .cs-item {
+    margin: 0 auto 2.5rem;
+    max-width: 22.5rem;
+    width: 100%;
+    list-style: none;
+  }
+  #h-services-81 .cs-item:last-of-type {
+    margin-bottom: 0;
+  }
+  #h-services-81 .cs-icon {
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
     margin: auto;
-    margin-bottom: 1.4375em;
+    /* 20px - 24px */
+    margin-bottom: clamp(1.25rem, 5vw, 1.5rem);
     background: var(--primary);
-    height: 5.5em;
-    width: 5.5em;
+    /* 68px - 88px */
+    height: clamp(4.25rem, 8.8vw, 5.5rem);
+    /* 68px - 88px */
+    width: clamp(4.25rem, 8.8vw, 5.5rem);
   }
-  .services .card picture img {
-    height: 3em;
-    width: 3em;
+  #h-services-81 .cs-icon img {
+    height: auto;
+    /* 44px - 52px */
+    width: clamp(2.75rem, 5.8vw, 3.25rem);
   }
-  .services .card h2 {
-    margin-bottom: 0.65em;
-    font-size: 2em;
-    line-height: 1.35em;
-    font-weight: 700;
-    color: #1a1a1a;
+  #h-services-81 .cs-title {
+    margin: 0 auto 0.5rem;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    line-height: 1.2em;
+    color: var(--headerColor);
     text-align: center;
   }
-  .services .card p {
-    opacity: 0.7;
-    width: 100%;
-    line-height: 1.33333333em;
+  #h-services-81 .cs-text {
+    margin: 0 auto;
+    max-width: 22.5rem;
+    font-size: 1rem;
+    line-height: 1.5em;
+    color: var(--bodyTextColor);
     text-align: center;
-  }
-  .services .card:last-of-type {
-    margin-bottom: 0;
   }
 }
-/* Inbetween */
-@media only screen and (min-width: 768px) {
-  .services {
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #h-services-81 .cs-card-group {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    width: 98%;
-    font-size: min(1.8vw, 1em);
+    align-items: center;
+    /* -76px to -320px - we're calculating whatever clamp is and multiplying by -1
+               to make the value negative since clamp doesn't work with negative values */
+    margin-top: calc(clamp(4.75rem, 20vw, 20rem)*-1);
+    max-width: 80rem;
+    column-gap: 2.5rem;
   }
-  .services .card {
+  #h-services-81 .cs-item {
+    /* Reset margin so it doesn't interfere with flexbox */
     margin: 0;
-    max-width: 20.3125em;
   }
 }
-/* Large Desktop */
-@media only screen and (min-width: 1300px) {
-  .services {
-    padding: 3.125em 5em;
-  }
-  .services .card {
-    max-width: 22.3125em;
-  }
-}
-/* Dark mode */
+/* Dark Mode */
 @media only screen and (min-width: 0rem) {
-  body.dark-mode #services {
+  body.dark-mode #h-services-81 .cs-card-group {
     background: var(--medium);
   }
-  body.dark-mode #services picture {
-    background: var(--primaryDark);
+  body.dark-mode #h-services-81 .cs-icon {
+    background: var(--darkTint);
   }
-  body.dark-mode #services h2 {
-    font-weight: bold;
+  body.dark-mode #h-services-81 .cs-title {
+    color: #fff;
+  }
+  body.dark-mode #h-services-81 .cs-text {
     color: #fff;
   }
 }
