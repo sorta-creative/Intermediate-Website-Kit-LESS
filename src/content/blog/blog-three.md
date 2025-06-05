@@ -1,11 +1,12 @@
 ---
-title: Acuti modo
-url: acuti-modo
+title: Blog Post Three
+url: blog-three
 description: Lorem markdownum tardantis unam mitissima dissimulator inposuit   corpus sintque tura tremenda, nec coetum.
-author: Code Stitch
-date: 2023-06-08T15:26:46.705Z
+author: Jason Ellsworth
+date: 2025-02-16T15:26:46.705Z
 tags:
     - post
+    - featured
 image: /assets/images/blog/landing.jpg
 imageAlt: Kitchen
 ---

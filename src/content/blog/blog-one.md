@@ -1,9 +1,9 @@
 ---
-title: Canitiem Saxa
-url: canitiem-saxa
-description: Lorem markdownum trabeati dicere deus.
-author: Code Stitch
-date: 2023-06-08T15:28:08.486Z
+title: Blog Post One
+url: blog-one
+description: This is a description of the blog post.
+author: Jason Ellsworth
+date: 2025-06-01T15:28:08.486Z
 tags:
     - post
     - featured

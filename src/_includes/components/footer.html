@@ -5,28 +5,26 @@
 <footer id="footer">
     <div class="container">
         <div class="left-section">
-            <a class="logo" href="/"><img loading="lazy" decoding="async" src="/assets/svgs/logo-white.svg" alt="logo" width="264" height="78"></a>
-            <p>
-                Extra content if you need it, if not you can delete this whole p tag. I usually do.
-            </p>
+            <a class="logo" href="/"><img loading="lazy" decoding="async" src="/assets/svgs/ellsworth-cooks-logo-white_300x300 (1).svg" alt="logo" width="300" height="300"></a>
+            
         </div>
         <div class="right-section">
             <div class="lists">
                 <ul>
                     <li>
-                        <h2>Information</h2>
+                        <h2>Sitemap</h2>
                     </li>
                     <li>
                         <a href="/">Home</a>
                     </li>
                     <li>
-                        <a href="/about">About Us</a>
+                        <a href="/about">About</a>
                     </li>
                     <li>
-                        <a href="/projects">Projects</a>
+                        <a href="/blog">Blog</a>
                     </li>
                     <li>
-                        <a href="/reviews">Reviews</a>
+                        <a href="/reviews">Testimonials</a>
                     </li>
                     <li>
                         <a href="/contact">Contact</a>
@@ -36,10 +34,18 @@
                     <li>
                         <h2>Services</h2>
                     </li>
-                    <li>Service1</li>
-                    <li>Service2</li>
-                    <li>Service4</li>
-                    <li>Service5</li>
+                    <li>
+                        <a href="/private-chef">Private Chef</a>
+                    </li>
+                    <li>
+                        <a href="/fishing-charters">Fishing Charters</a>
+                    </li>
+                    <li>
+                        <a href="/private-chef">Community Events</a>
+                    </li>
+                    <li>
+                        <a href="/private-chef">Branded Content</a>
+                    </li>
                 </ul>
                 <ul>
                     <li>
@@ -47,11 +53,11 @@
                     </li>
                     <li>
                         <a href="/contact">
-                            {{client.address.lineOne}}<br>
-                            {{client.address.lineTwo}}<br>
-                            {{client.address.city}}
+                            <!-- {{client.address.lineOne}}<br>
+                            {{client.address.lineTwo}}<br> -->
+                            {{client.address.city}},
                             {{client.address.state}}
-                            {{client.address.zip}}
+                            <!-- {{client.address.zip}} -->
                         </a>
                     </li>
                     <li>
@@ -63,15 +69,28 @@
                     <li>
                         <a href="mailto:{{client.email}}">Click to Email</a>
                     </li>
+                     <!-- Social Media -->
+                <div class="cs-social-group cs-social">
+                    <a class="cs-social-link" aria-label="visit instagram profile" href="{{client.socials.instagram}}">
+                        <img class="cs-social-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Social/instagram.svg" alt="instagram" width="11" height="11">
+                    </a>
+                    <a class="cs-social-link" aria-label="visit facebook profile" href="{{client.socials.facebook}}">
+                        <img class="cs-social-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Social/Facebook.svg" alt="facebook" width="6" height="11">
+                    </a>
+                    <a class="cs-social-link" aria-label="visit youtube profile" href="{{client.socials.youtube}}">
+                        <img class="cs-social-img" aria-hidden="true" loading="lazy" decoding="async" src="https://ik.imagekit.io/w42ufkgf1p/EllsworthCooks/YouTube.svg?updatedAt=1748258555060" alt="youtube" width="11" height="11">
+                    </a>
+                </div>
+            </li>
                 </ul>
             </div>
         </div>
     </div>
 
     <div class="credit">
-        <span>Designed and Hand Coded by</span>
-        <a href="/" target="_blank" rel="noopener">Your Company Name</a>
+        <span>Designed and Coded by</span>
+        <a href="https://sortacreative.co/" target="_blank" rel="noopener">Sorta™ Creative</a>
         <span class="copyright">
-            Copyright {% year %} - Present</span>
+            Copyright {% year %}</span>
     </div>
 </footer>
